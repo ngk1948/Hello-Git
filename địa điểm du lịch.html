@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Du Lịch Việt Nam - Khám Phá Tổ Quốc</title>
+    <style>
+            *{
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial;
+                background: whitesmoke;
+                color: black;
+            }
+            .khung-dau-trang {
+                background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+                url('https://static.vinwonders.com/2022/12/du-lich-viet-nam-05.jpg');
+                background-size: cover;
+                background-position: center;
+                color: white;
+                padding: 80px 20px;
+            }
+            .thanh-dieu-huong {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .thanh-dieu-huong a {
+                color: white;
+                margin-left: 18px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            .khu-gioi-thieu {
+                max-width: 1100px;
+                margin: 40px auto 0;
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+            .khu-gioi-thieu h1 {
+                font-size: 34px;
+                margin-bottom: 10px;
+            }
+            .nut-bam {
+                background: #0f766e;
+                color: white;
+                padding: 12px 18px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+            }
+            .noi-dung {
+                max-width: 1100px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+            .luoi {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 18px;
+            }
+            .the-muc {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+            }
+            .the-muc img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+            }
+            .noi-dung-the {
+                padding: 14px;
+            }
+            .tieu-de {
+                font-size: 22px;
+                margin: 6px 0 12px;
+            }
+            @media(max-width:720px) {
+                .khu-gioi-thieu {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .thanh-dieu-huong {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+            }
+    </style>
+    </head>
+    <body>
+    <header class="khung-dau-trang">
+        <div class="thanh-dieu-huong">
+        <nav>
+            <a href="#destinations">Điểm đến</a>
+            <a href="#lienhe">Liên hệ</a>
+        </nav>
+        </div>
+        <div class="khu-gioi-thieu">
+        <div class="intro">
+            <h1>Khám phá Việt Nam </h1>
+            <p>Hướng dẫn du lịch, điểm đến đặc sắc, món ăn truyền thống và hành trình gợi ý cho mọi kiểu du khách.</p>
+            <a class="nut-bam" href="#destinations"> Bắt đầu khám phá </a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main class="noi-dung">
+        <section id="destinations">
+        <h2 class="tieu-de"> Những điểm đến nổi bật </h2>
+        <div class="luoi">
+            <article class="the-muc">
+            <img src="https://dulichhoangha.com/upload/files/dia-diem-du-lich-ha-long.jpg">
+            <div class="noi-dung-the">
+                <h3> <a href="halong.html"> Hạ Long - Địa Điểm Du Lịch Việt Nam Được Lòng Fan Quốc Tế </a> </h3>
+            </div>
+            </article>
+            <article class="the-muc">
+            <img src="https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture/News/News_expe_12051/12051.png?version=101715">
+            <div class="noi-dung-the">
+                <h3> <a href="hội an.html"> Phố Cổ Hội An - Di Sản Văn Hóa Sát Cạnh Đà Nẵng </a> </h3>
+            </div>
+            </article>
+            <article class="the-muc">
+            <img src="https://i.ytimg.com/vi/0VE0t3u69CI/sddefault.jpg">
+            <div class="noi-dung-the">
+                <h3> <a href="huế.html"> Huế - Di sản lịch sử </a> </h3>
+            </div>
+            </article>
+        </div>
+        </section>
+        <section id="lienhe" style="margin-top:28px">
+            <h2 class="tieu-de"> Liên hệ & Hỗ trợ </h2>
+            <div style="display:grid; grid-template-columns:1fr 320px; gap:18px; margin-top:12px">
+            <div class="the-muc" style="padding:14px">
+                <h3>Hỗ trợ hành trình</h3>
+                <textarea 
+                    placeholder="Viết yêu cầu hoặc mô tả chuyến đi tại đây..."
+                    style="width:100%; height:200px; padding:10px; margin-top:10px; border-radius:8px; resize: vertical;">
+                </textarea>
+            </div>
+            <form class="the-muc" style="padding:14px" onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi sẽ liên hệ với bạn sớm.')">
+            <label>Họ tên</label>
+            <input required style="width:100%; padding:10px; margin:6px 0; border-radius:8px">
+            <label>Email</label>
+            <input type="email" required style="width:100%; padding:10px; margin:6px 0; border-radius:8px">
+            <label>Nội dung</label>
+            <textarea rows="4" style="width:100%; padding:10px; margin:6px 0; border-radius:8px"> Mô tả ngắn về chuyến đi... </textarea>
+            <button class="nut-bam" style="width:100%">Gửi yêu cầu</button>
+            </form>
+        </div>
+        </section>
+    </main>
+    </body>
+</html>
+
+
